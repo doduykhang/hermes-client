@@ -87,6 +87,7 @@ export default function Home() {
 	const handleRoomClick = (room: room) => {
 		setShouldConnect(true)
 		const baseURL = process.env.NEXT_PUBLIC_WS_URL
+		console.log("baseUrl", baseURL)
 		setSocketUrl(`${baseURL}/api/chat/connect/${room.id}`)
 		setSelectedRoom(room.id)	
 	}
